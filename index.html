@@ -1,0 +1,1143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>When Poetry Sings — Abraham Cruz · Poetry, Song &amp; Opera</title>
+<meta name="description" content="When Poetry Sings is the personal site of Abraham Isai Cruz Ramirez — poet, singer, and composer in San Antonio, Texas. Home to his 43 poems (@elartistabe) and his opera in progress, Bajo el mismo cielo." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-950:#121210;
+    --teal-900:#1a1a18;
+    --teal-800:#232320;
+    --teal-700:#2e2e2a;
+    --gold:#b49b72;
+    --gold-2:#d3bd93;
+    --gold-soft:#e9dec9;
+    --paper:#fbfaf7;
+    --paper-2:#efeeea;
+    --ink:#191917;
+    --ink-soft:#5b5b56;
+    --line:rgba(25,25,23,.13);
+    --card:#ffffff;
+    --shadow:0 20px 50px rgba(18,18,16,.14);
+    --radius:20px;
+    --art-wash:linear-gradient(rgba(251,250,247,.95),rgba(251,250,247,.98)),url("assets/about-art.webp");
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#161615;
+      --paper-2:#101010;
+      --ink:#f3f1ec;
+      --ink-soft:#c6c2b8;
+      --line:rgba(211,189,147,.20);
+      --card:#1f1f1d;
+      --shadow:0 20px 50px rgba(0,0,0,.35);
+      --art-wash:linear-gradient(rgba(22,22,21,.94),rgba(22,22,21,.97)),url("assets/about-art.webp");
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Manrope",system-ui,sans-serif;background-color:var(--paper);background-image:var(--art-wash);background-size:cover;background-position:center top;background-attachment:fixed;color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  button,[role="button"]{min-height:44px}
+  .serif{font-family:"Cormorant Garamond",Georgia,serif}
+  .sc{font-family:"Cormorant Garamond",Georgia,serif}
+
+  /* ---------- Nav ---------- */
+  .nav{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px clamp(16px,4vw,40px);background:linear-gradient(to bottom,rgba(18,18,16,.82),rgba(18,18,16,0));color:#faf9f6;transition:background .3s}
+  .nav.scrolled{background:rgba(18,18,16,.94);backdrop-filter:blur(10px);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;letter-spacing:.02em}
+  .brand-mark{width:40px;height:40px;border:1.5px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-family:"Cormorant Garamond",Georgia,serif;color:var(--gold-2);font-size:15px;font-weight:700;letter-spacing:.04em;flex:none}
+  .brand small{display:block;font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2)}
+  .brand span{font-family:"Cormorant Garamond",serif;font-size:22px;line-height:1;font-weight:600}
+  .nav-links{display:flex;gap:6px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+  .nav-links a{text-decoration:none;font-size:13.5px;font-weight:700;padding:10px 12px;border-radius:999px;min-height:40px;display:inline-flex;align-items:center}
+  .nav-links a:hover{background:rgba(255,255,255,.12)}
+  .nav-links a.cta{background:var(--gold);color:#171714}
+  .nav-links a.cta:hover{background:var(--gold-2)}
+  @media(max-width:760px){.nav-links a:not(.cta){display:none}}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;background:var(--teal-950);color:#faf9f6;overflow:hidden}
+  .hero-bg{position:absolute;inset:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.92}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,18,16,.62) 0%,rgba(18,18,16,.18) 38%,rgba(18,18,16,.28) 62%,rgba(18,18,16,.96) 100%)}
+  .hero-inner{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:148px clamp(18px,4vw,40px) 0}
+  .hero-top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
+  .pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(211,189,147,.55);color:var(--gold-soft);border-radius:999px;padding:8px 14px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:rgba(18,18,16,.45)}
+  .pill i{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block}
+  .vertical{writing-mode:vertical-rl;font-family:"Cormorant Garamond",Georgia,serif;letter-spacing:.5em;color:rgba(250,249,246,.75);font-size:15px}
+  @media(max-width:640px){.vertical{display:none}}
+  h1{font-family:"Cormorant Garamond",serif;font-weight:600;line-height:.92;margin:26px 0 0;font-size:clamp(58px,11vw,124px);letter-spacing:-.01em}
+  h1 em{font-style:italic;color:var(--gold-2)}
+  h1 .line2{display:block}
+  .hero-sub{margin-top:22px;display:flex;flex-wrap:wrap;gap:14px 28px;align-items:baseline}
+  .hero-sub .from{font-family:"Cormorant Garamond",serif;font-size:clamp(26px,4vw,40px);font-style:italic;color:#fff}
+  .hero-sub .cn{font-family:"Cormorant Garamond",Georgia,serif;color:var(--gold-2);font-size:18px;letter-spacing:.12em}
+  .hero-lede{max-width:620px;font-size:17px;line-height:1.75;color:rgba(250,249,246,.88);margin:18px 0 0}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:800;font-size:14.5px;padding:14px 22px;border-radius:999px;min-height:52px;border:1px solid transparent;cursor:pointer}
+  .btn-gold{background:var(--gold);color:#171714}
+  .btn-gold:hover{background:var(--gold-2)}
+  .btn-ghost{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.35)}
+  .btn-ghost:hover{background:rgba(255,255,255,.14)}
+  .hero-card{margin-top:44px;background:rgba(250,249,246,.97);color:#191917;border-radius:20px 20px 0 0;padding:0;display:grid;grid-template-columns:1.25fr .9fr .9fr;overflow:hidden;box-shadow:0 -10px 50px rgba(0,0,0,.25)}
+  @media(prefers-color-scheme:dark){.hero-card{background:#12332e;color:#f3f1ec}}
+  .hero-card>div{padding:20px 22px;border-right:1px solid var(--line)}
+  .hero-card>div:last-child{border-right:0}
+  .hc-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:#7a6544}
+  @media(prefers-color-scheme:dark){.hc-label{color:var(--gold-2)}}
+  .hc-big{font-family:"Cormorant Garamond",serif;font-size:26px;font-weight:600;line-height:1.15;margin-top:5px}
+  .hc-small{font-size:13.5px;color:var(--ink-soft);margin-top:3px;line-height:1.5}
+  @media(max-width:820px){.hero-card{grid-template-columns:1fr}.hero-card>div{border-right:0;border-bottom:1px solid var(--line)}.hero-card>div:last-child{border-bottom:0}}
+
+  /* ---------- Sections ---------- */
+  .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+  section{padding:84px 0}
+  .kicker{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#7a6544}
+  @media(prefers-color-scheme:dark){.kicker{color:var(--gold-2)}}
+  .kicker::before{content:"";width:36px;height:1.5px;background:var(--gold)}
+  h2{font-family:"Cormorant Garamond",serif;font-size:clamp(36px,5.5vw,58px);line-height:1.02;font-weight:600;margin:14px 0 0}
+  h2 em{font-style:italic;color:#7a6544}
+  @media(prefers-color-scheme:dark){h2 em{color:var(--gold-2)}}
+  .lede{font-size:17px;line-height:1.8;color:var(--ink-soft);max-width:640px;margin-top:16px}
+  .two-col{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+  @media(max-width:860px){.two-col{grid-template-columns:1fr}}
+  .img-frame{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);position:relative}
+  .img-frame img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+  .img-caption{position:absolute;left:14px;bottom:14px;background:rgba(18,18,16,.85);color:#faf9f6;padding:9px 13px;border-radius:10px;font-size:12.5px;font-weight:700;backdrop-filter:blur(6px)}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+  .stat{border-top:2px solid var(--gold);padding-top:12px}
+  .stat b{font-family:"Cormorant Garamond",serif;font-size:32px;display:block;line-height:1}
+  .stat span{font-size:12.5px;color:var(--ink-soft);font-weight:700;letter-spacing:.04em}
+  @media(max-width:520px){.stats{grid-template-columns:1fr 1fr}}
+
+  /* ---------- Chapters / Tabs ---------- */
+  .chapters{background:var(--teal-950);color:#faf9f6;border-radius:0}
+  .chapters .kicker{color:var(--gold-2)}
+  .chapters h2 em{color:var(--gold-2)}
+  .chapters .lede{color:rgba(250,249,246,.78)}
+  .tabs{display:flex;gap:10px;flex-wrap:wrap;margin-top:32px}
+  .tab{border:1px solid rgba(211,189,147,.45);background:transparent;color:#faf9f6;border-radius:999px;padding:12px 20px;font:inherit;font-weight:800;font-size:14px;cursor:pointer;display:inline-flex;align-items:center;gap:9px}
+  .tab .sc{font-weight:600;letter-spacing:.06em}
+  .tab[aria-selected="true"]{background:var(--gold);color:#171714;border-color:var(--gold)}
+  .chapter-panel{margin-top:26px;background:rgba(255,255,255,.05);border:1px solid rgba(211,189,147,.22);border-radius:22px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+  @media(max-width:860px){.chapter-panel{grid-template-columns:1fr}}
+  .chapter-panel img{width:100%;height:100%;object-fit:cover;min-height:320px}
+  .chapter-body{padding:clamp(24px,4vw,40px)}
+  .chapter-body h3{font-family:"Cormorant Garamond",serif;font-size:36px;line-height:1.05;margin:0;font-weight:600}
+  .chapter-body h3 em{color:var(--gold-2);font-style:italic}
+  .meta-list{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:0}
+  .meta-list li{display:flex;justify-content:space-between;gap:18px;padding:13px 0;border-top:1px solid rgba(211,189,147,.18);font-size:14.5px}
+  .meta-list li b{color:var(--gold-soft);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;padding-top:3px;flex:none}
+  .meta-list li span{text-align:right}
+  .chapter-body p{color:rgba(250,249,246,.84);line-height:1.75;font-size:15.5px}
+
+  /* ---------- Artists ---------- */
+  .artist-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+  @media(max-width:900px){.artist-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.artist-grid{grid-template-columns:1fr}}
+  .artist{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;position:relative;overflow:hidden}
+  .artist::before{content:attr(data-cn);position:absolute;right:14px;top:8px;font-family:"Cormorant Garamond",Georgia,serif;font-size:64px;color:rgba(180,155,114,.14);font-weight:700;line-height:1}
+  .artist .role{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:#7a6544}
+  @media(prefers-color-scheme:dark){.artist .role{color:var(--gold-2)}}
+  .artist h3{font-family:"Cormorant Garamond",serif;font-size:29px;margin:8px 0 2px;font-weight:600;line-height:1.1}
+  .artist .cn-name{font-family:"Cormorant Garamond",Georgia,serif;color:var(--ink-soft);font-size:15px;letter-spacing:.08em}
+  .artist p{font-size:14.5px;color:var(--ink-soft);line-height:1.7;margin:12px 0 0}
+  .artist .chapter-tag{display:inline-block;margin-top:16px;font-size:12px;font-weight:800;padding:7px 11px;border-radius:999px;background:var(--paper-2);border:1px solid var(--line)}
+
+  /* ---------- Program themes ---------- */
+  .themes{background:var(--paper-2)}
+  .theme-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,4vw,48px);margin-top:34px;align-items:start}
+  @media(max-width:860px){.theme-layout{grid-template-columns:1fr}}
+  .theme-btns{display:grid;gap:10px}
+  .theme-btn{text-align:left;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;font:inherit;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;width:100%}
+  .theme-btn b{font-family:"Cormorant Garamond",serif;font-size:23px;font-weight:600}
+  .theme-btn span{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+  .theme-btn[aria-pressed="true"]{background:var(--teal-900);color:#faf9f6;border-color:var(--teal-900)}
+  .theme-btn[aria-pressed="true"] span{color:var(--gold-2)}
+  .theme-card{background:var(--teal-900);color:#faf9f6;border-radius:20px;padding:clamp(26px,4vw,40px);min-height:340px;box-shadow:var(--shadow)}
+  .theme-card .poem{font-family:"Cormorant Garamond",serif;font-size:clamp(26px,3.6vw,36px);line-height:1.3;font-style:italic;font-weight:500}
+  .theme-card .poem-cn{font-family:"Cormorant Garamond",Georgia,serif;font-size:19px;color:var(--gold-2);margin-top:16px;letter-spacing:.06em;line-height:1.9}
+  .theme-card p{color:rgba(250,249,246,.82);line-height:1.8;font-size:15.5px;margin-top:18px}
+  .staff{height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin:22px 0 0;opacity:.7}
+
+  /* ---------- Recognition ---------- */
+  .recog{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+  @media(max-width:900px){.recog{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.recog{grid-template-columns:1fr}}
+  .recog-item{border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--card)}
+  .recog-item .big{font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:600;line-height:1.2}
+  .recog-item p{font-size:13.5px;color:var(--ink-soft);margin:8px 0 0;line-height:1.6}
+  blockquote{margin:44px 0 0;font-family:"Cormorant Garamond",serif;font-size:clamp(26px,4vw,40px);line-height:1.25;font-style:italic;font-weight:500;text-align:center;max-width:860px;margin-left:auto;margin-right:auto}
+  blockquote cite{display:block;font-family:"Manrope",sans-serif;font-style:normal;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:#7a6544;margin-top:16px}
+  @media(prefers-color-scheme:dark){blockquote cite{color:var(--gold-2)}}
+
+  /* ---------- Concert band ---------- */
+  .band{position:relative;border-radius:24px;overflow:hidden;min-height:440px;display:flex;align-items:flex-end;box-shadow:var(--shadow)}
+  .band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(18,18,16,.92))}
+  .band-content{position:relative;z-index:2;color:#faf9f6;padding:clamp(24px,4vw,44px);max-width:680px}
+  .band-content h3{font-family:"Cormorant Garamond",serif;font-size:clamp(30px,4.5vw,46px);line-height:1.05;margin:0;font-weight:600}
+  .band-content p{color:rgba(250,249,246,.88);line-height:1.75}
+
+  /* ---------- Visit ---------- */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+  @media(max-width:820px){.visit-grid{grid-template-columns:1fr}}
+  .visit-card{border-radius:20px;padding:28px;border:1px solid var(--line);background:var(--card)}
+  .visit-card.next{background:var(--teal-900);color:#faf9f6;border-color:var(--teal-900)}
+  .visit-card .when{font-family:"Cormorant Garamond",serif;font-size:34px;font-weight:600;line-height:1.1}
+  .visit-card.next .when{color:var(--gold-2)}
+  .visit-card h3{margin:6px 0 0;font-size:16px}
+  .visit-card p{font-size:14.5px;line-height:1.7;opacity:.85}
+  .badge{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:7px 11px;border-radius:999px;background:var(--gold);color:#171714;margin-bottom:14px}
+  .badge.soft{background:var(--paper-2);color:var(--ink);border:1px solid var(--line)}
+
+  footer{background:var(--teal-950);color:rgba(250,249,246,.78);padding:56px 0 36px}
+  .foot-grid{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap}
+  .foot-title{font-family:"Cormorant Garamond",serif;color:#faf9f6;font-size:30px;font-weight:600}
+  footer a{color:var(--gold-2);text-decoration:none;font-weight:700}
+  footer a:hover{text-decoration:underline}
+  .foot-links{display:flex;gap:8px;flex-wrap:wrap}
+  .foot-links a{padding:10px 12px;min-height:40px;display:inline-flex;align-items:center}
+  .fine{border-top:1px solid rgba(211,189,147,.18);margin-top:36px;padding-top:20px;font-size:12.5px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+  /* ---------- Clean refinements ---------- */
+  section{padding:110px 0}
+  .artist{box-shadow:none;border-radius:6px}
+  .artist::before{display:none}
+  .recog-item,.visit-card,.theme-btn{border-radius:6px;box-shadow:none}
+  .theme-card,.img-frame,.band{border-radius:8px;box-shadow:none}
+  .chapter-panel{border-radius:8px}
+  .hero-card{box-shadow:none}
+
+  /* ---------- Poems by Abraham Cruz ---------- */
+  .poems{background:var(--paper);color:var(--ink)}
+  .poems-inner{max-width:780px;margin:0 auto}
+  .poems .lede{max-width:640px}
+  .poet-line{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;margin-top:36px}
+  .poet-line strong{font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:600}
+  .poet-line span{color:var(--ink-soft);font-size:14px}
+  .ig-link{font-weight:700;font-size:14px;color:#7a6544;text-decoration:none;padding:10px 0;min-height:44px;display:inline-flex;align-items:center}
+  @media(prefers-color-scheme:dark){.ig-link{color:var(--gold-2)}}
+  .ig-link:hover{text-decoration:underline}
+  .poem-tools{display:flex;gap:16px;align-items:center;margin-top:40px;flex-wrap:wrap}
+  .poem-search{flex:1 1 240px;border-bottom:1px solid var(--line);display:flex;align-items:center}
+  .poem-search input{flex:1;background:transparent;border:0;outline:0;color:var(--ink);font:inherit;font-size:15px;min-height:44px;min-width:0;padding:0}
+  .poem-search input::placeholder{color:var(--ink-soft)}
+  .poem-count{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}
+  .poem-list{margin-top:10px}
+  .poem-entry{padding:34px 0 30px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:52px 1fr;gap:8px 20px}
+  @media(max-width:560px){.poem-entry{grid-template-columns:36px 1fr;padding:28px 0 24px}}
+  .poem-num{font-size:12px;font-weight:700;letter-spacing:.12em;color:#7a6544;padding-top:9px}
+  @media(prefers-color-scheme:dark){.poem-num{color:var(--gold-2)}}
+  .poem-main{min-width:0}
+  .poem-title{font-family:"Cormorant Garamond",serif;font-size:27px;font-weight:600;line-height:1.15;margin:0 0 8px}
+  .poem-excerpt{font-family:"Cormorant Garamond",serif;font-size:clamp(21px,2.6vw,25px);line-height:1.5;font-weight:500;margin:0;color:var(--ink)}
+  .poem-link{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;letter-spacing:.04em;text-decoration:none;color:#7a6544;margin-top:14px;padding:8px 0;min-height:40px}
+  @media(prefers-color-scheme:dark){.poem-link{color:var(--gold-2)}}
+  .poem-link:hover{text-decoration:underline}
+  .poem-empty{display:none;padding:36px 0;text-align:center;color:var(--ink-soft);border-bottom:1px solid var(--line)}
+  .poem-empty.show{display:block}
+  /* Poem image embeds — the original @elartistabe image posts */
+  .poem-embed{margin-top:20px;max-width:470px;background:var(--paper-2);border:1px solid var(--line);border-radius:8px;overflow:hidden;position:relative}
+  .poem-embed-frame{position:relative;height:560px;background:var(--paper-2)}
+  @media(max-width:560px){.poem-embed-frame{height:500px}}
+  .poem-embed-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#fff}
+  .poem-embed-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:28px;color:var(--ink-soft);font-size:14.5px;line-height:1.6}
+  .poem-embed-fallback strong{font-family:"Cormorant Garamond",serif;font-size:24px;color:var(--ink);font-weight:600;line-height:1.2}
+  .poem-embed-fallback a{font-weight:800;color:#7a6544;text-decoration:none}
+  @media(prefers-color-scheme:dark){.poem-embed-fallback a{color:var(--gold-2)}}
+  .poem-embed-fallback a:hover{text-decoration:underline}
+  .poem-embed-cap{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:11px 14px;border-top:1px solid var(--line);background:var(--card);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+  .poem-embed-cap a{color:#7a6544;text-decoration:none;text-transform:none;letter-spacing:0;font-size:13px;white-space:nowrap}
+  @media(prefers-color-scheme:dark){.poem-embed-cap a{color:var(--gold-2)}}
+  .poem-embed-cap a:hover{text-decoration:underline}
+
+  /* ---------- Professional artistic background ---------- */
+  /* A faint contemporary abstract painting washes the whole page —
+     clean gallery white / charcoal over it, bronze as the only accent. */
+  .hero{background:#121210}
+  .hero-bg img{opacity:.88}
+  .poems{background:transparent}
+  .themes{background:rgba(122,110,88,.07)}
+  #opera{background-image:linear-gradient(rgba(18,18,16,.92),rgba(18,18,16,.96)),url("assets/hero-art.webp") !important;background-size:cover !important;background-position:center !important}
+  .theme-card{background-image:linear-gradient(rgba(26,26,24,.90),rgba(26,26,24,.95)),url("assets/hero-art.webp");background-size:cover;background-position:center}
+  .visit-card.next{background-image:linear-gradient(rgba(26,26,24,.93),rgba(26,26,24,.96)),url("assets/hero-art.webp");background-size:cover;background-position:center}
+  .img-frame{border:1px solid var(--line)}
+  .poem-embed{background:rgba(255,255,255,.55)}
+  @media(prefers-color-scheme:dark){.poem-embed{background:rgba(255,255,255,.04)}}
+  @media(max-width:760px){body{background-attachment:scroll}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="When Poetry Sings — Abraham Cruz, home">
+    <span class="brand-mark">AC</span>
+    <span><small>The Personal Site of Abraham Cruz</small><span>When Poetry Sings</span></span>
+  </a>
+  <nav class="nav-links" aria-label="Main">
+    <a href="#about">About Abraham</a>
+    <a href="#poems">Poems</a>
+    <a href="#opera">The Opera</a>
+    <a href="#themes">Themes</a>
+    <a href="#studio" class="cta">Cruz Music Studio</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="hero-bg"><img src="assets/hero-art.webp" alt="Contemporary abstract painting — flowing bronze and ivory ribbons of sound across a deep charcoal background" /></div>
+  <div class="hero-inner">
+    <div class="hero-top">
+      <span class="pill"><i></i> Abraham Isai Cruz Ramirez · San Antonio, Texas</span>
+    </div>
+    <h1>When <em>Poetry</em><span class="line2">Sings —</span></h1>
+    <div class="hero-sub">
+      <span class="from">The poems &amp; music of Abraham Cruz</span>
+      <span class="cn">Poetry &nbsp;·&nbsp; Song &nbsp;·&nbsp; Opera</span>
+    </div>
+    <p class="hero-lede">This is my corner of the internet — mine alone. I'm Abraham Cruz: poet, singer, and composer. I write a bunch of poetry, I sing opera, I teach music in San Antonio — and right now I'm writing an opera of my own. Everything here is my work: the poems, the images, the music in progress.</p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="#poems">Read the poems →</a>
+      <a class="btn btn-ghost" href="#opera">The opera I'm writing</a>
+    </div>
+
+    <div class="hero-card" aria-label="About Abraham at a glance">
+      <div>
+        <div class="hc-label">The Poet</div>
+        <div class="hc-big">43 poems &amp; counting</div>
+        <div class="hc-small">Written and shared as images at @elartistabe on Instagram — gratitude, healing, love, and being human.</div>
+      </div>
+      <div>
+        <div class="hc-label">The Composer</div>
+        <div class="hc-big">Bajo el mismo cielo</div>
+        <div class="hc-small">“Under the Same Sky” — a bilingual opera in one act, now in progress.</div>
+      </div>
+      <div>
+        <div class="hc-label">The Teacher &amp; Singer</div>
+        <div class="hc-big">Cruz Music Studio</div>
+        <div class="hc-small">Director of Cruz Music Studio in San Antonio — voice, piano &amp; guitar — and a singer with Austin Opera.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap two-col">
+    <div>
+      <div class="kicker">About Abraham</div>
+      <h2>Poet. Singer. <em>Composer. Teacher.</em></h2>
+      <p class="lede">I'm <strong>Abraham Isai Cruz Ramirez</strong> of San Antonio, Texas. Poetry came first — I've written a bunch of it, poem after poem on gratitude, healing, love, and what it means to be human, and I share each one as an image at <strong>@elartistabe</strong>. Song came with it: I'm a singer with <strong>Austin Opera</strong>, where I sing in the chorus of <em>Thaïs</em> — and the Servant — and in <em>La traviata</em>.</p>
+      <p class="lede">By day I direct <strong>Cruz Music Studio</strong>, teaching voice at every level, piano from beginner to intermediate, and beginner guitar — and I run <strong>Music For All Hearts</strong>, the nonprofit I brought to life in 2024. Now all of it is flowing into the biggest thing I've ever made: an opera of my own, <em>Bajo el mismo cielo</em>.</p>
+      <div class="stats">
+        <div class="stat"><b>43</b><span>Poems shared at @elartistabe</span></div>
+        <div class="stat"><b>1</b><span>Opera in progress — Bajo el mismo cielo</span></div>
+        <div class="stat"><b>3</b><span>Instruments taught — voice, piano, guitar</span></div>
+      </div>
+    </div>
+    <div class="img-frame">
+      <img src="assets/about-art.webp" alt="Contemporary abstract artwork — sweeping charcoal and bronze forms with fine lines on a clean white ground" />
+      <span class="img-caption">Poetry in song — song in poetry</span>
+    </div>
+  </div>
+</section>
+
+<!-- POEMS BY ABRAHAM CRUZ -->
+<section class="poems" id="poems">
+  <div class="wrap"><div class="poems-inner">
+    <div class="kicker">The Poetry</div>
+    <h2>Poems by <em>Abraham Cruz</em></h2>
+    <p class="lede">I write a bunch of poetry — on gratitude, healing, love, and being human — and I share each poem as an image, as <a href="https://www.instagram.com/elartistabe" target="_blank" rel="noopener" style="font-weight:700;color:inherit">@elartistabe</a> on Instagram. Here are all forty-three poems, newest first, each with its original image post embedded right below it — the poem exactly as I posted it. If an embed can't load where you're viewing this, its link opens the original post on Instagram.</p>
+    <div class="poet-line">
+      <div><strong>Abraham Cruz</strong><br><span>Poet · @elartistabe — poetry, art, mental health, and all things that make the human body breathe.</span></div>
+      <a class="ig-link" href="https://www.instagram.com/elartistabe" target="_blank" rel="noopener">Follow @elartistabe on Instagram →</a>
+    </div>
+    <div class="poem-tools">
+      <label class="poem-search"><span class="sr-only" style="position:absolute;left:-9999px">Search poems</span><input id="poemSearch" type="search" placeholder="Search — try “gratitude”, “heal”, “love”…" aria-label="Search poems"></label>
+      <span class="poem-count" id="poemCount">43 poems</span>
+    </div>
+    <div class="poem-list" id="poemList">
+      <article class="poem-entry" data-search="gratitude so grateful to be writing again. wrote this one this week. it feels good to experience gratitude through every experience of life.">
+        <div class="poem-num">01</div>
+        <div class="poem-main">
+          <h3 class="poem-title">Gratitude</h3>
+          <p class="poem-excerpt">So grateful to be writing again. Wrote this one this week. It feels good to experience gratitude through every experience of life.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/DeDw7-fOLR3/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/DeDw7-fOLR3/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/DeDw7-fOLR3/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/DeDw7-fOLR3/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" what a beautiful way it is to live with gratitude.">
+        <div class="poem-num">02</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">What a beautiful way it is to live with gratitude.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/DZWi3-nuAtY/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/DZWi3-nuAtY/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/DZWi3-nuAtY/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/DZWi3-nuAtY/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" the older i get, the more i believe: love and the actions of people are not the same thing.">
+        <div class="poem-num">03</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">The older I get, the more I believe: Love and the actions of people are not the same thing.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/DZSpir8uki-/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/DZSpir8uki-/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/DZSpir8uki-/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/DZSpir8uki-/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" this poem was born from something i&#x27;ve been reflecting on deeply this month. truth is not always what we believe it to be when we first encounter it.">
+        <div class="poem-num">04</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">This poem was born from something I&#x27;ve been reflecting on deeply this month. Truth is not always what we believe it to be when we first encounter it.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/DZO8yTlu1Ov/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/DZO8yTlu1Ov/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/DZO8yTlu1Ov/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/DZO8yTlu1Ov/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" this poem is supposed to feel like you are writing as you read it — as you get to hear your voice in a real life experience.">
+        <div class="poem-num">05</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">This poem is supposed to feel like you are writing as you read it — as you get to hear your voice in a real life experience.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/DUg3dCZjnjf/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/DUg3dCZjnjf/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/DUg3dCZjnjf/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/DUg3dCZjnjf/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" untitled poem — on being human, and meditation">
+        <div class="poem-num">06</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Untitled poem — on being human, and meditation</p>
+          <a class="poem-link" href="https://www.instagram.com/p/DT2CMleDvJL/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/DT2CMleDvJL/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/DT2CMleDvJL/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/DT2CMleDvJL/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" what does it mean to heal? is it forgiveness? letting go of people? or is it performance?">
+        <div class="poem-num">07</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">What does it mean to heal? Is it forgiveness? Letting go of people? Or is it performance?</p>
+          <a class="poem-link" href="https://www.instagram.com/p/DTFC_mmjpYq/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/DTFC_mmjpYq/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/DTFC_mmjpYq/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/DTFC_mmjpYq/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" healing doesn&#x27;t mean erasing the past, it means being able to look at it with gentleness.">
+        <div class="poem-num">08</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Healing doesn&#x27;t mean erasing the past, it means being able to look at it with gentleness.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/DPwcycBDlPx/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/DPwcycBDlPx/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/DPwcycBDlPx/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/DPwcycBDlPx/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" sometimes loss becomes the doorway to finding who we are.">
+        <div class="poem-num">09</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Sometimes loss becomes the doorway to finding who we are.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/DNqru-vPwi2/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/DNqru-vPwi2/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/DNqru-vPwi2/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/DNqru-vPwi2/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" every human emotion is powerful and beautiful — how we grow, transform, and embrace the depth of the human experience.">
+        <div class="poem-num">10</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Every human emotion is powerful and beautiful — how we grow, transform, and embrace the depth of the human experience.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/DGOtqA5hmXu/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/DGOtqA5hmXu/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/DGOtqA5hmXu/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/DGOtqA5hmXu/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search="the last offering a poetic farewell, where memory prepares a final feast, time calls for departure, and the soul finds its rest.">
+        <div class="poem-num">11</div>
+        <div class="poem-main">
+          <h3 class="poem-title">The Last Offering</h3>
+          <p class="poem-excerpt">A poetic farewell, where memory prepares a final feast, time calls for departure, and the soul finds its rest.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/DGJ5poBvrqk/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/DGJ5poBvrqk/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/DGJ5poBvrqk/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/DGJ5poBvrqk/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" familiarity can feel good. but it does not mean it is good for us. study yourself and look at all the layers.">
+        <div class="poem-num">12</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Familiarity can feel good. But it does not mean it is good for us. Study yourself and look at all the layers.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/DF9Tq9quWSh/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/DF9Tq9quWSh/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/DF9Tq9quWSh/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/DF9Tq9quWSh/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" love is so powerful and i believe it is a gift. a gift that is heavy to hold.">
+        <div class="poem-num">13</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Love is so powerful and I believe it is a gift. A gift that is heavy to hold.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/DBAdBcLOukq/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/DBAdBcLOukq/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/DBAdBcLOukq/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/DBAdBcLOukq/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" the truth is, each day is practice. and what we do each day repeatedly becomes permanent. so choose yourself every day.">
+        <div class="poem-num">14</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">The truth is, each day is practice. And what we do each day repeatedly becomes permanent. So choose yourself every day.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/DA8U8YaPBwN/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/DA8U8YaPBwN/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/DA8U8YaPBwN/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/DA8U8YaPBwN/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" at times, the ones we&#x27;d do anything for are the ones that take everything that makes us complete.">
+        <div class="poem-num">15</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">At times, the ones we&#x27;d do anything for are the ones that take everything that makes us complete.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C9rRQgQO4uE/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C9rRQgQO4uE/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C9rRQgQO4uE/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C9rRQgQO4uE/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" untitled poem — on love and life">
+        <div class="poem-num">16</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Untitled poem — on love and life</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C7n0qpYO5NW/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C7n0qpYO5NW/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C7n0qpYO5NW/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C7n0qpYO5NW/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" untitled poem — on love and life">
+        <div class="poem-num">17</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Untitled poem — on love and life</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C7KwYxWP4Bl/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C7KwYxWP4Bl/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C7KwYxWP4Bl/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C7KwYxWP4Bl/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" untitled poem — poetry is not dead; spilled ink for poetry lovers">
+        <div class="poem-num">18</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Untitled poem — poetry is not dead; spilled ink for poetry lovers</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C626cNcOKyx/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C626cNcOKyx/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C626cNcOKyx/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C626cNcOKyx/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" letting go expectations">
+        <div class="poem-num">19</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Letting go expectations</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C6wQdbxOt-Y/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C6wQdbxOt-Y/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C6wQdbxOt-Y/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C6wQdbxOt-Y/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" we are all dreaming. and our lens of the world impacts our emotional body.">
+        <div class="poem-num">20</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">We are all dreaming. And our lens of the world impacts our emotional body.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C6oJq4XuMZE/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C6oJq4XuMZE/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C6oJq4XuMZE/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C6oJq4XuMZE/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" it is so important to dig deep and allow ourselves to sit in discomfort. that is when we can start the process to healing.">
+        <div class="poem-num">21</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">It is so important to dig deep and allow ourselves to sit in discomfort. That is when we can start the process to healing.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C53y5PKOw49/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C53y5PKOw49/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C53y5PKOw49/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C53y5PKOw49/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" we are the artists of our lives, and the way we love will be returned to us.">
+        <div class="poem-num">22</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">We are the artists of our lives, and the way we love will be returned to us.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C5jErPhPbrm/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C5jErPhPbrm/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C5jErPhPbrm/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C5jErPhPbrm/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" this poem embodies one of the love languages — quality time.">
+        <div class="poem-num">23</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">This poem embodies one of the love languages — quality time.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C5b4fLXP0oe/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C5b4fLXP0oe/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C5b4fLXP0oe/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C5b4fLXP0oe/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" only we know the depths of our love.">
+        <div class="poem-num">24</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Only we know the depths of our love.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C5Y782guEPv/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C5Y782guEPv/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C5Y782guEPv/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C5Y782guEPv/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" love teaches us so many things — we must always love ourselves fully so that we are ready to truly love another.">
+        <div class="poem-num">25</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Love teaches us so many things — we must always love ourselves fully so that we are ready to truly love another.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C5UuPBbOooz/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C5UuPBbOooz/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C5UuPBbOooz/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C5UuPBbOooz/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" you can only love your surroundings to the amount that you love yourself.">
+        <div class="poem-num">26</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">You can only love your surroundings to the amount that you love yourself.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C5Ryv4pPFdG/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C5Ryv4pPFdG/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C5Ryv4pPFdG/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C5Ryv4pPFdG/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" love has always been about you.">
+        <div class="poem-num">27</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Love has always been about you.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C5J5v8fvVQ_/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C5J5v8fvVQ_/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C5J5v8fvVQ_/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C5J5v8fvVQ_/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" the loss of color is the loss of love and life.">
+        <div class="poem-num">28</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">The loss of color is the loss of love and life.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C5EUIlmOpjh/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C5EUIlmOpjh/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C5EUIlmOpjh/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C5EUIlmOpjh/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" untitled poem — on love and life">
+        <div class="poem-num">29</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Untitled poem — on love and life</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C5CfOzJOkQP/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C5CfOzJOkQP/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C5CfOzJOkQP/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C5CfOzJOkQP/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" the power of silence, and sitting with our emotions.">
+        <div class="poem-num">30</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">The power of silence, and sitting with our emotions.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C41FUpMvrkH/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C41FUpMvrkH/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C41FUpMvrkH/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C41FUpMvrkH/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" strong emotions come in waves, sometimes so heavy they take so much space — allowing yourself to feel them is the key.">
+        <div class="poem-num">31</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Strong emotions come in waves, sometimes so heavy they take so much space — allowing yourself to feel them is the key.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C4zcbQcuGJO/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C4zcbQcuGJO/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C4zcbQcuGJO/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C4zcbQcuGJO/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" love. the best feeling in the world.">
+        <div class="poem-num">32</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Love. The best feeling in the world.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C4v8ETnP5hd/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C4v8ETnP5hd/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C4v8ETnP5hd/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C4v8ETnP5hd/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" the end of love is a new beginning for the love we deserve.">
+        <div class="poem-num">33</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">The end of love is a new beginning for the love we deserve.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C4qaclPOOP8/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C4qaclPOOP8/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C4qaclPOOP8/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C4qaclPOOP8/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" love can do so many things.">
+        <div class="poem-num">34</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Love can do so many things.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C4pMMs7u5En/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C4pMMs7u5En/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C4pMMs7u5En/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C4pMMs7u5En/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" i wrote this poem a while back. i&#x27;m still amazed at how it makes me feel reading it to this day.">
+        <div class="poem-num">35</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">I wrote this poem a while back. I&#x27;m still amazed at how it makes me feel reading it to this day.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C4cPunIuQyV/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C4cPunIuQyV/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C4cPunIuQyV/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C4cPunIuQyV/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" our greatest pain is also our greatest lesson.">
+        <div class="poem-num">36</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Our greatest pain is also our greatest lesson.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C4OwTjgvOy2/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C4OwTjgvOy2/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C4OwTjgvOy2/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C4OwTjgvOy2/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" friendly reminder: allow for everything good in life to grow organically.">
+        <div class="poem-num">37</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Friendly reminder: allow for everything good in life to grow organically.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C4LyseOvXxn/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C4LyseOvXxn/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C4LyseOvXxn/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C4LyseOvXxn/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" untitled poem — on karma">
+        <div class="poem-num">38</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Untitled poem — on karma</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C3-bpl_OXMu/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C3-bpl_OXMu/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C3-bpl_OXMu/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C3-bpl_OXMu/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" our biggest trials shape the heart we now carry.">
+        <div class="poem-num">39</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Our biggest trials shape the heart we now carry.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C3-ZJT9u6Oi/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C3-ZJT9u6Oi/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C3-ZJT9u6Oi/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C3-ZJT9u6Oi/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" space creates and heals.">
+        <div class="poem-num">40</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Space creates and heals.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C35jzt2RLKy/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C35jzt2RLKy/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C35jzt2RLKy/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C35jzt2RLKy/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" it&#x27;s better to exit than to fit into something we don&#x27;t want to be.">
+        <div class="poem-num">41</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">It&#x27;s better to exit than to fit into something we don&#x27;t want to be.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C3n7fpJOhuY/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C3n7fpJOhuY/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C3n7fpJOhuY/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C3n7fpJOhuY/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" love is the universe&#x27;s language for growth and healing. it&#x27;s why we all desire to be loved.">
+        <div class="poem-num">42</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">Love is the universe&#x27;s language for growth and healing. It&#x27;s why we all desire to be loved.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C3n4_JFuojX/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C3n4_JFuojX/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C3n4_JFuojX/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C3n4_JFuojX/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="poem-entry" data-search=" the first post: an account about poetry, art, mental health, and all things that make the human body breathe.">
+        <div class="poem-num">43</div>
+        <div class="poem-main">
+          
+          <p class="poem-excerpt">The first post: an account about poetry, art, mental health, and all things that make the human body breathe.</p>
+          <a class="poem-link" href="https://www.instagram.com/p/C3n1magOS0a/" target="_blank" rel="noopener">Read on Instagram <span aria-hidden="true">→</span></a>
+          <div class="poem-embed" data-embed-url="https://www.instagram.com/p/C3n1magOS0a/embed/">
+            <div class="poem-embed-frame">
+              <div class="poem-embed-fallback"><strong>Poem image</strong><span>This poem was posted as an image at @elartistabe.</span><a href="https://www.instagram.com/p/C3n1magOS0a/" target="_blank" rel="noopener">View the poem image on Instagram →</a></div>
+            </div>
+            <div class="poem-embed-cap"><span>Original image post · @elartistabe</span><a href="https://www.instagram.com/p/C3n1magOS0a/" target="_blank" rel="noopener">Open post →</a></div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="poem-empty" id="poemEmpty">No poems match that search. <button type="button" id="poemClear" style="background:none;border:0;color:inherit;font:inherit;font-weight:700;text-decoration:underline;cursor:pointer;padding:8px">Clear search</button></div>
+    <p style="margin-top:36px;color:var(--ink-soft);font-size:14.5px;line-height:1.7">The collection begins with “The first post” — an account about poetry, art, mental health, and all things that make the human body breathe — and arrives, forty-three poems later, at gratitude.</p>
+  </div></div>
+</section>
+
+<!-- THE OPERA -->
+<section id="opera" style="background:var(--teal-950);color:#faf9f6">
+  <div class="wrap two-col">
+    <div>
+      <div class="kicker" style="color:var(--gold-2)">Now Writing</div>
+      <h2 style="color:#faf9f6">An opera of <em style="color:var(--gold-2)">my own</em></h2>
+      <p class="lede" style="color:rgba(250,249,246,.82)">I'm composing an opera and writing its libretto: <strong style="color:#faf9f6">Bajo el mismo cielo</strong> — <em>“Under the Same Sky.”</em> A bilingual Spanish–English opera in one act, about eighty minutes, and built for Young Artist Programs.</p>
+      <p class="lede" style="color:rgba(250,249,246,.82)">Nine soloists — and a chorus that appears only twice: at the opening crossing, and at a father's death. The full libretto is drafted, with an aria for every role. Esperanza's Scene 6 aria, <strong style="color:#faf9f6">“Con Todo Mi Ser”</strong> — music and lyrics by me — is already out in the world: a soprano is working on it now, and I hope to record it at Austin Opera.</p>
+      <div class="stats">
+        <div class="stat"><b style="color:#faf9f6">1 act</b><span style="color:rgba(250,249,246,.7)">About 1 hour 20 minutes</span></div>
+        <div class="stat"><b style="color:#faf9f6">2</b><span style="color:rgba(250,249,246,.7)">Languages — Spanish &amp; English</span></div>
+        <div class="stat"><b style="color:#faf9f6">9</b><span style="color:rgba(250,249,246,.7)">Soloists, plus chorus</span></div>
+      </div>
+    </div>
+    <div class="img-frame">
+      <img src="assets/stage-art.webp" alt="Painterly image of a grand piano and a singer in a single shaft of stage light — the world of the opera in progress" />
+      <span class="img-caption">Bajo el mismo cielo — Under the Same Sky</span>
+    </div>
+  </div>
+</section>
+
+<!-- THEMES IN THE WORK -->
+<section class="themes" id="themes">
+  <div class="wrap">
+    <div class="kicker">Themes in the Work</div>
+    <h2>Four threads <em>through everything I write</em></h2>
+    <p class="lede">Tap a thread to explore the emotional landscape that runs through my poems — and straight into the opera.</p>
+    <div class="theme-layout">
+      <div class="theme-btns" id="themeBtns">
+        <button class="theme-btn" data-theme="0" aria-pressed="true"><b>Gratitude</b><span>Thankfulness</span></button>
+        <button class="theme-btn" data-theme="1" aria-pressed="false"><b>Healing</b><span>Becoming whole</span></button>
+        <button class="theme-btn" data-theme="2" aria-pressed="false"><b>Love</b><span>In all its weight</span></button>
+        <button class="theme-btn" data-theme="3" aria-pressed="false"><b>Being Human</b><span>The whole of it</span></button>
+      </div>
+      <div class="theme-card" aria-live="polite">
+        <div class="poem" id="themePoem">“What a beautiful way it is to live with gratitude.”</div>
+        <div class="poem-cn" id="themeCn" style="font-family:'Cormorant Garamond',serif;font-style:italic">— from the newest poems at @elartistabe</div>
+        <div class="staff"></div>
+        <p id="themeText">Gratitude is where the collection arrives. After forty-three poems of loss, love, and repair, the most recent work — including the poem simply titled “Gratitude” — practices thankfulness through every experience of life, not just the easy ones.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STUDIO -->
+<section style="padding-top:0" id="studio">
+  <div class="wrap">
+    <div class="band">
+      <img src="assets/hero-art.webp" alt="Contemporary abstract painting — flowing bronze and ivory ribbons of sound across a deep charcoal background" />
+      <div class="band-content">
+        <div class="kicker" style="color:var(--gold-2)">On Stage &amp; In the Studio</div>
+        <h3>A poem on the page, a voice on the stage, a student at the piano.</h3>
+        <p>It all connects: the poems feed the opera, the opera feeds the singing, and the singing is what I teach every week in San Antonio.</p>
+      </div>
+    </div>
+
+    <div class="visit-grid">
+      <article class="visit-card next">
+        <span class="badge">Cruz Music Studio</span>
+        <div class="when">San Antonio, Texas</div>
+        <h3>Lessons with Abraham</h3>
+        <p>I direct Cruz Music Studio and teach <strong>voice at all levels</strong>, <strong>piano from beginner to intermediate</strong>, and <strong>beginner guitar</strong> — in person at the studio, in-home, and online.</p>
+        <a class="btn btn-gold" href="#poems" style="margin-top:8px">Start with the poems →</a>
+      </article>
+      <article class="visit-card">
+        <span class="badge soft">Music For All Hearts</span>
+        <div class="when">The nonprofit</div>
+        <h3>Music, for every heart</h3>
+        <p>In 2024 I brought <strong>Music For All Hearts</strong> to life — bringing music to children and families. It's the heart behind everything else on this page.</p>
+        <a class="btn btn-ghost" href="#opera" style="color:var(--ink);border-color:var(--line);margin-top:8px">See the opera in progress</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-title">When Poetry Sings</div>
+        <p style="max-width:420px;line-height:1.7;margin:10px 0 0">The personal site of Abraham Isai Cruz Ramirez — his poems, his images, his opera in progress. His alone.</p>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="#about">About Abraham</a><a href="#poems">Poems</a><a href="#opera">The Opera</a><a href="#themes">Themes</a><a href="#studio">Cruz Music Studio</a>
+      </nav>
+    </div>
+    <div class="fine">
+      <span>© 2026 Abraham Isai Cruz Ramirez. All poems © Abraham Cruz. All rights reserved.</span>
+      <span>San Antonio, Texas · Poetry · Song · Opera</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Nav scroll state
+  var nav=document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('scrolled', window.scrollY>40); }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // Program themes
+  var themes=[
+    {poem:'\u201cWhat a beautiful way it is to live with gratitude.\u201d', cn:'\u2014 from the newest poems at @elartistabe', text:'Gratitude is where the collection arrives. After forty-three poems of loss, love, and repair, the most recent work \u2014 including the poem simply titled \u201cGratitude\u201d \u2014 practices thankfulness through every experience of life, not just the easy ones.'},
+    {poem:'\u201cHealing doesn\u2019t mean erasing the past \u2014 it means being able to look at it with gentleness.\u201d', cn:'\u2014 from the healing poems at @elartistabe', text:'Again and again the poems ask what it means to heal: Is it forgiveness? Letting go of people? Sitting with discomfort until the process can start? The answer they keep circling is gentleness \u2014 space creates, and space heals.'},
+    {poem:'\u201cLove is so powerful, and I believe it is a gift \u2014 a gift that is heavy to hold.\u201d', cn:'\u2014 from the love poems at @elartistabe', text:'Love runs through the collection like a bass line: love as the universe\u2019s language for growth and healing, love that teaches us we must love ourselves fully before we can truly love another, and love whose ending becomes a new beginning.'},
+    {poem:'\u201cEvery human emotion is powerful and beautiful.\u201d', cn:'\u2014 from the poems on being human at @elartistabe', text:'The account began as \u201cpoetry, art, mental health, and all things that make the human body breathe\u201d \u2014 and that is still the subject: strong emotions arriving in waves, silence, dreaming, karma, and the daily practice of choosing yourself.'}
+  ];
+  document.querySelectorAll('.theme-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.theme-btn').forEach(function(b){b.setAttribute('aria-pressed','false');});
+      btn.setAttribute('aria-pressed','true');
+      var t=themes[parseInt(btn.getAttribute('data-theme'),10)];
+      document.getElementById('themePoem').textContent=t.poem;
+      document.getElementById('themeCn').textContent=t.cn;
+      document.getElementById('themeText').textContent=t.text;
+    });
+  });
+
+  // Poem search
+  var search=document.getElementById('poemSearch');
+  var count=document.getElementById('poemCount');
+  var empty=document.getElementById('poemEmpty');
+  var entriesAll=document.querySelectorAll('.poem-entry');
+  function filterPoems(){
+    var q=(search.value||'').trim().toLowerCase(); var shown=0;
+    entriesAll.forEach(function(el){ var hit=!q || el.getAttribute('data-search').indexOf(q)>-1; el.style.display=hit?'':'none'; if(hit) shown++; });
+    count.textContent=shown+(shown===1?' poem':' poems');
+    empty.classList.toggle('show', shown===0);
+  }
+  if(search){ search.addEventListener('input', filterPoems); }
+  var clear=document.getElementById('poemClear');
+  if(clear){ clear.addEventListener('click', function(){ search.value=''; filterPoems(); search.focus(); }); }
+
+  // Poem image embeds — mount each Instagram embed only as it nears the viewport
+  var embedBoxes=document.querySelectorAll('.poem-embed[data-embed-url]');
+  function mountEmbed(box){
+    if(box.getAttribute('data-mounted')) return;
+    box.setAttribute('data-mounted','1');
+    var frame=box.querySelector('.poem-embed-frame');
+    if(!frame) return;
+    var iframe=document.createElement('iframe');
+    iframe.src=box.getAttribute('data-embed-url');
+    iframe.setAttribute('sandbox','allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox');
+    iframe.setAttribute('referrerpolicy','no-referrer');
+    iframe.setAttribute('loading','lazy');
+    iframe.setAttribute('scrolling','no');
+    iframe.setAttribute('title','Original poem image post from @elartistabe on Instagram');
+    iframe.addEventListener('load', function(){
+      var fb=frame.querySelector('.poem-embed-fallback');
+      if(fb) fb.style.display='none';
+    });
+    frame.appendChild(iframe);
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(items){
+      items.forEach(function(it){ if(it.isIntersecting){ mountEmbed(it.target); io.unobserve(it.target); } });
+    },{rootMargin:'600px 0px'});
+    embedBoxes.forEach(function(b){ io.observe(b); });
+  } else {
+    embedBoxes.forEach(mountEmbed);
+  }
+})();
+</script>
+</body>
+</html>
